@@ -5,12 +5,7 @@
 
 trigger:
 - master
-- task: CmdLine@2
-  inputs:
-    script: |
-      echo Write your commands here
-      
-      echo Hello world
+
 pool:
   vmImage: 'windows-latest'
 
@@ -32,7 +27,9 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: VSTest@2
+- task: CmdLine@2
   inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    script: |
+      echo Write your commands here
+      
+      echo Hello world
