@@ -10,7 +10,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: DevOpsDemo
 
 steps:
 - script: echo Hello, world!
